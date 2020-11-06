@@ -14,7 +14,6 @@ function task1() {
 }
 // task1()
 
-
 // Zadanie 2
 // Pobierz liczbę z użyciem metody prompt (lub wpisz ją jako stałą, jeżeli użycie
 // metody prompt sprawia Ci trudność) i sprawdź, czy mieści się w przedziale <-
@@ -34,7 +33,6 @@ function task2() {
     }
 }
 // task2();
-
 
 // Zadanie 3
 // Pobierz liczbę z użyciem metody prompt i za pomocą instrukcji warunkowej switch wyświetl w konsoli komunikat:
@@ -66,7 +64,6 @@ function task3() {
 }
 // task3();
 
-
 // Upewnijcie się, czy pobrana wartość jest na pewno liczbą (z użyciem metody typeof). Jeżeli nie
 // jest, proszę przekonwertować ją na liczbę (parseInt oraz parseFloat)
 
@@ -78,7 +75,6 @@ function task4(word) {
 }
 
 // task4("In The Way");
-
 
 // Zadanie 5
 // Stwórz funkcję obliczającą liczbę wygranych, remisów i przegranych oraz obliczającą liczbę
@@ -97,8 +93,7 @@ function task5(wins, draw, looses) {
 
 // task5(5, 6, 2);
 
-
-// Zadanie 5
+// Zadanie 6
 // Farmer prosi cię, abyś powiedział mu, ile nóg można policzyć wśród wszystkich jego zwierząt.
 // Rolnik hoduje trzy gatunki:
 // • kurczaki = 2 nogi
@@ -116,3 +111,26 @@ function task6(chickens, cows, pigs) {
 }
 
 // task6(21, 6, 8);
+
+// Zadanie 7
+// Utwórz funkcję, która przyjmuje liczbę całkowitą i zwraca silnię tej liczby całkowitej. Oznacza to,
+// że liczba całkowita pomnożona przez wszystkie dodatnie niższe liczby całkowite.
+
+function silnia(n) {
+    if ((n == 0) || (n == 1))
+        return 1
+    else {
+        let result = (n * silnia(n - 1));
+        return result
+    }
+}
+
+
+function dupa(n) {
+    if ((n == 0) || (n == 1)) {
+        return 1
+    } else {
+        let result = (n * dupa(n - 1))
+        return result;
+    }
+}
