@@ -125,12 +125,57 @@ function silnia(n) {
     }
 }
 
+const wynikSilni = silnia(7)
+console.log(wynikSilni);
 
-function dupa(n) {
-    if ((n == 0) || (n == 1)) {
-        return 1
-    } else {
-        let result = (n * dupa(n - 1))
-        return result;
+// Zadanie 8
+// Napisz funkcję, która przyjmuje obiekt jako parametr, ile stron może wydrukować każdy kolor
+// atramentu. Podaj maksymalną liczbę stron, które drukarka może wydrukować, zanim skończy się
+// którykolwiek z kolorów
+
+
+
+function inkLevels() {
+    let wynik = Math.min(objekt.cyan, objekt.magneta, objekt.yellow)
+    return wynik
+}
+
+const iloscWydruku = inkLevels(objekt = {
+    "cyan": 23,
+    "magneta": 11,
+    "yellow": 10,
+})
+
+console.log(iloscWydruku);
+
+// Zadanie 9 
+// Mając podaną wartość pH, zwróć, czy jest to wartość zasadowa (większa niż 7), „kwaśna”
+// (mniejsza niż 7) czy obojętna (7). Zwróć nieprawidłowy, jeśli podana wartość jest mniejsza niż 0
+// lub większa niż 14. Proszę wykorzystać instrukcję switch.
+
+function obliczeniePh(ph) {
+    switch (true) {
+        case ((ph < 0) || (ph > 14)):
+            wynikpH = `błędna wartość ph. podaj warość z zakresu od 1 do 14`
+            break;
+
+        case ((ph >= 0) && (ph < 7)):
+            wynikpH = `Wartość kwasowa`
+            break;
+
+        case ph === 7:
+            wynikpH = `Wartość obojętna`
+            break;
+
+        case ((ph > 7) && (ph <= 14)):
+            wynikpH = `Wartość zasadowa`
+            break;
+
+        default:
+            wynikpH = `Podaj warość pH z zakresu od 1 do 14`
+            break;
     }
 }
+
+obliczeniePh(6.999999)
+console.log(wynikpH);
